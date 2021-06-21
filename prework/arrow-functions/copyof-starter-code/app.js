@@ -208,8 +208,8 @@ Student.prototype.scope = function() {
 // Right output
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-console.log(joe.scope(1));
-// Right output
+console.log(joe.scope());
+// Right output and undefined 
 
 Student.prototype.scopeArrow = () => console.log(this);
 
@@ -218,9 +218,10 @@ console.log(joe.scopeArrow());
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
-/////////// It is invoking the properties own for the constructor functions
+/////////// It is invoking the properties own for the constructor functions itself  I mean this one (let Student = function(name, age, hometown))
 //
 // 2. What is "this" when joe.scopeArrow() is invoked?
-///////// It is invoking the DOM document to thier window.
+///////// It is invoking the DOM document to thier window. I mean counstructor window 
 // 3. Explain why "this" is different when an arrow function is used.
 ////////// arrow functions follow lexical scoping or normal rules for looking at variables i decleard
+// (from google search) this value inside a regular function is dynamic and depends on the invocation. But this inside the arrow function is bound lexically and equals to this of the outer function.
